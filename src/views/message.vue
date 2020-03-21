@@ -117,6 +117,7 @@ export default {
     currentChange: function(res) {
       // res就是当前分页的显示页，根据显示页调取getMsglist获取数据
       console.log(res);
+      console.log(qqq);
     }
   }
 };
