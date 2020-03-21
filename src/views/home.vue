@@ -24,7 +24,7 @@ export default {};
     width: calc(100% - 25rem);
     height: 3.75rem;
     margin: 0 12.5rem;
-    background-color: #00bc12;
+    background-color: #67c23a;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +45,7 @@ export default {};
         height: 50px;
         line-height: 50px;
         text-align: center;
-        color: #f0f0f4;
+        color: #c0c4cc;
         margin-left: 20px;
         display: inline-block;
         position: relative;
@@ -53,14 +53,14 @@ export default {};
           content: "";
           width: 50%;
           height: 0;
-          background-color: #000000;
+          background-color: #303133;
           position: absolute;
           left: 50%;
           bottom: 5px;
           transition: all 0.2s;
         }
         &:hover {
-          color: #392f41;
+          color: #303133;
           &::after {
             left: 0%;
             width: 100%;
