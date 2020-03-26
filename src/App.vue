@@ -15,6 +15,7 @@ export default {
 #app {
   width: 100%;
   height: 100%;
+  min-width: 1400px;
 }
 html {
   /*隐藏滚动条，当IE下溢出，仍然可以滚动*/

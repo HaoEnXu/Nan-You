@@ -25,7 +25,7 @@
             </li>
             <li class="line_content">{{item.content}}</li>
             <li class="line_peice">￥{{item.price}}起</li>
-            <li class="look_detail">
+            <li class="look_detail" @click="addShopCar(item)">
               <i class="el-icon-plus"></i> 添加到购物车
             </li>
           </ul>
@@ -41,6 +41,7 @@
         </div>
       </div>
       <div class="pagi">
+        <!-- 分页的那些东西我没绑定，也不知道你会不会用到 -->
         <el-pagination layout="prev, pager, next" :total="50"></el-pagination>
       </div>
     </div>
@@ -59,6 +60,7 @@ export default {
           season: "4月-9月",
           num: "45",
           price: "2360",
+          type: 1,
           map: "../assets/img/bg_line.png",
           content: "郑州  →  云台寺  →  洛阳  →  少林寺  →  开封",
           imgList: [
@@ -69,12 +71,14 @@ export default {
           ]
         },
         {
-          name: "河南旅游局推荐精华6日线路",
-          season: "4月-9月",
-          num: "45",
-          price: "2360",
+          name: "河南旅发委推荐4日线路",
+          season: "3-5月，9-11月",
+          num: "52",
+          price: "4480",
+          type: 1,
           map: "../assets/img/bg_line.png",
-          content: "郑州  →  云台寺  →  洛阳  →  少林寺  →  开封",
+          content:
+            "D1 洛阳白马寺 →洛阳周王城天子驾六博物馆 →隋唐洛阳城国家遗址公园(天堂明堂景区) →丽景门 →洛阳老街D2 洛阳博物馆 →洛阳关林 →龙门石窟 →功夫诗九卷",
           imgList: [
             require("../assets/img/1-1.jpeg"),
             require("../assets/img/1-2.jpeg"),
@@ -83,12 +87,13 @@ export default {
           ]
         },
         {
-          name: "河南旅游局推荐精华6日线路",
-          season: "4月-9月",
-          num: "45",
-          price: "2360",
+          name: "开封经典一日游",
+          season: "4月，10-11月",
+          num: "31",
+          price: "888",
+          type: 2,
           map: "../assets/img/bg_line.png",
-          content: "郑州  →  云台寺  →  洛阳  →  少林寺  →  开封",
+          content: " 开封府 →清明上河园 →大宋东京梦华实景演出 →鼓楼广场夜市",
           imgList: [
             require("../assets/img/1-1.jpeg"),
             require("../assets/img/1-2.jpeg"),
@@ -97,12 +102,14 @@ export default {
           ]
         },
         {
-          name: "河南旅游局推荐精华6日线路",
-          season: "4月-9月",
-          num: "45",
-          price: "2360",
+          name: "少林寺经典一日游",
+          season: "春季，秋季",
+          num: "31",
+          price: "666",
+          type: 2,
           map: "../assets/img/bg_line.png",
-          content: "郑州  →  云台寺  →  洛阳  →  少林寺  →  开封",
+          content:
+            "少林寺 →少林寺演武厅功夫表演团 →《禅宗少林·音乐大典》实景演出",
           imgList: [
             require("../assets/img/1-1.jpeg"),
             require("../assets/img/1-2.jpeg"),
@@ -111,12 +118,13 @@ export default {
           ]
         },
         {
-          name: "河南旅游局推荐精华6日线路",
-          season: "4月-9月",
-          num: "45",
-          price: "2360",
+          name: "云台山经典一日游",
+          season: "全年",
+          num: "42",
+          price: "1020",
+          type: 2,
           map: "../assets/img/bg_line.png",
-          content: "郑州  →  云台寺  →  洛阳  →  少林寺  →  开封",
+          content: "云台山 →潭瀑峡 →泉瀑峡 →猕猴谷",
           imgList: [
             require("../assets/img/1-1.jpeg"),
             require("../assets/img/1-2.jpeg"),
@@ -142,6 +150,12 @@ export default {
     //  根据tab值获取具体内容
     chooseLine: function(param) {
       console.log(param);
+      // 发起请求，返回数据，然后将linesArray重新赋值，刷新数据
+    },
+    // 添加到购物车
+    addShopCar: function(param) {
+      console.log(param);
+      this.$message.success("成功添加到购物车");
     }
   }
 };
@@ -194,7 +208,7 @@ export default {
     flex-direction: row;
     .case_base {
       width: 500px;
-      height: 200px;
+      min-height: 200px;
       .cb_left {
         li {
           &.line_base {

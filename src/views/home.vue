@@ -53,14 +53,14 @@ export default {};
           content: "";
           width: 50%;
           height: 0;
-          background-color: #303133;
+          background-color: #fff;
           position: absolute;
           left: 50%;
           bottom: 5px;
           transition: all 0.2s;
         }
         &:hover {
-          color: #303133;
+          color: #fff;
           &::after {
             left: 0%;
             width: 100%;
@@ -70,7 +70,7 @@ export default {};
 
         &.router-link-active,
         .router-link-exact-active {
-          color: #392f41;
+          color: #fff;
           &::after {
             left: 0%;
             width: 100%;

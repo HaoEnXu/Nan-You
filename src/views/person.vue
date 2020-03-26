@@ -1,24 +1,26 @@
 <template>
-   <div>
-       个人信息页
-   </div>
+  <div>
+    <tabBar @changeTab="changeTab" :list="list"></tabBar>
+  </div>
 </template>
 
 <script>
+import tabBar from "../components/tabBar";
 export default {
-   data () {
-      return {
+  data() {
+    return {
+      list: ["基本信息", "购物车"]
+    };
+  },
 
-      };
-   },
+  components: { tabBar },
 
-   components: {},
-
-   computed: {},
-
-   methods: {}
-}
+  methods: {
+    changeTab: function(param) {
+      console.log(param);
+    }
+  }
+};
 </script>
 <style lang='css' scoped>
-
 </style>

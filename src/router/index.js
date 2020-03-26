@@ -35,7 +35,7 @@ export default new Router({
         {
           path: "city",
           name: "city",
-          compoent: city
+          component: city
         },
         {
           path: "lines",
@@ -45,7 +45,7 @@ export default new Router({
         {
           path: "person",
           name: "person",
-          compoent: person
+          component: person
         },
         {
           path: "goods",
