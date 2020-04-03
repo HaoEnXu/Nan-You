@@ -78,7 +78,7 @@ export default {
       transition: all 0.2s ease-in-out;
     }
     &.active {
-      color: rgb(92, 224, 26);
+      color: #5ce01a;
       &::after {
         left: 0%;
         width: 100%;
