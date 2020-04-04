@@ -19,7 +19,8 @@ export default {};
 </script>
 <style lang="less">
 #cover {
-  width: 100%;
+  width: 1600px;
+  margin: 0 auto;
   .topBanner {
     width: calc(100% - 25rem);
     height: 3.75rem;

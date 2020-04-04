@@ -1,0 +1,223 @@
+.title {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  color: #686868;
+  margin: 20px 0;
+}
+.mustGo {
+  width: 100%;
+  margin-top: 20px;
+}
+.mustGo .mg_item {
+  width: 100%;
+  height: 340px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+}
+.mustGo .mg_item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  width: 100%;
+  height: 2px;
+  background-color: #eeeeee;
+}
+.mustGo .mg_item .mg_left {
+  width: 30%;
+  height: 100%;
+}
+.mustGo .mg_item .mg_left .mg_title span {
+  display: inline-block;
+}
+.mustGo .mg_item .mg_left .mg_title span.mg_index {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #60f028;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.mustGo .mg_item .mg_left .mg_title span.mg_name {
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.mustGo .mg_item .mg_left .mg_title span.mg_num {
+  font-size: 16px;
+  color: #60f028;
+}
+.mustGo .mg_item .mg_left .mg_des {
+  margin: 20px 0;
+  font-weight: 300;
+}
+.mustGo .mg_item .mg_left .mg_more {
+  line-height: 30px;
+}
+.mustGo .mg_item .mg_left .mg_more .mg_more_item {
+  color: #60f028;
+  margin: 0 10px;
+  cursor: pointer;
+  position: relative;
+}
+.mustGo .mg_item .mg_left .mg_more .mg_more_item:hover {
+  color: #2c9104;
+}
+.mustGo .mg_item .mg_left .mg_more .mg_more_item:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #2c9104;
+}
+.mustGo .mg_item .mg_right {
+  width: 600px;
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-flow: column wrap;
+}
+.mustGo .mg_item .mg_right img {
+  display: inline-block;
+  border-radius: 5px;
+}
+.mustGo .mg_item .mg_right img.mg_photo_0 {
+  width: 550px;
+  height: 100%;
+}
+.mustGo .mg_item .mg_right img.mg_photo_1 {
+  width: 200px;
+  height: 150px;
+}
+.mustGo .mg_item .mg_right img.mg_photo_2 {
+  width: 200px;
+  height: 150px;
+}
+.hotGo .hg {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.hotGo .hg a {
+  display: inline-block;
+  width: 280px;
+  height: 190px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.hotGo .hg a img {
+  width: 100%;
+  height: 100%;
+}
+.hotGo .hg a .hg_top_name {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 5;
+}
+.hotGo .hg a .mark {
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  transition: all 0.2s ease-in-out;
+}
+.hotGo .hg a .mark .hg_mark_name {
+  position: absolute;
+  font-size: 20px;
+  left: 20px;
+  top: 50%;
+  color: #fff;
+}
+.hotGo .hg a .mark .hg_mark_des {
+  position: absolute;
+  font-size: 14px;
+  left: 20px;
+  top: 70%;
+  color: #fff;
+}
+.hotGo .hg a:hover .hg_top_name {
+  display: none;
+}
+.hotGo .hg a:hover .mark {
+  bottom: 0;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hotGo .hg.top a.hg_top_0 {
+  width: 600px;
+  height: 400px;
+}
+.hotGo .hg.bot {
+  margin-top: 30px;
+}
+.hotGo .hg.bot a.hg_bot_2 {
+  width: 600px;
+  height: 400px;
+}
+.allGo {
+  width: 100%;
+}
+.allGo .ag_list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+.allGo .ag_list .ag_item {
+  width: 218px;
+  margin-bottom: 20px;
+  height: 200px;
+  font-size: 0;
+  border: 1px solid #f2f6fc;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+.allGo .ag_list .ag_item img {
+  width: 100%;
+  height: 150px;
+}
+.allGo .ag_list .ag_item .ag_img_name {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+}
+.allGo .ag_list .ag_item:hover .ag_img_name {
+  color: #39c303;
+}
+.allGo .page {
+  text-align: center;
+}
+.allGo .page /deep/ li.number:hover {
+  color: #39c303;
+}
+.allGo .page /deep/ li.number.active {
+  background-color: #39c303;
+}
+.allGo .page /deep/ li.number.active:hover {
+  color: #fff;
+}
