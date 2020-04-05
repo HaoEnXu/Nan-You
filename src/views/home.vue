@@ -1,6 +1,6 @@
 <template>
   <div id="cover">
-    <div class="topBanner">
+    <div class="topBanner typeArea">
       <div class="logo"></div>
       <div class="bt_lists">
         <router-link class="base_btn" to="/home/index" exact>首页</router-link>
@@ -11,7 +11,7 @@
         <router-link class="base_btn" to="/home/message">留言板</router-link>
       </div>
     </div>
-    <router-view class="view_container"></router-view>
+    <router-view class="view_container typeArea"></router-view>
   </div>
 </template>
 <script>
@@ -19,17 +19,19 @@ export default {};
 </script>
 <style lang="less">
 #cover {
-  width: 1600px;
-  margin: 0 auto;
+  width: 100%;
   .topBanner {
-    width: calc(100% - 25rem);
+    width: 100%;
     height: 3.75rem;
-    margin: 0 12.5rem;
     background-color: #67c23a;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
+    &.typeArea {
+      width: 1200px;
+      margin: 0 auto;
+    }
     .logo {
       width: 6.25rem;
       height: 100%;
@@ -82,9 +84,12 @@ export default {};
     }
   }
   .view_container {
-    width: calc(100% - 25rem);
+    width: 100%;
     height: 100%;
-    padding: 0 12.5rem;
+    &.typeArea {
+      width: 1200px;
+      margin: 0 auto;
+    }
   }
 }
 </style>

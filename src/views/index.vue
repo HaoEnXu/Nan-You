@@ -93,10 +93,12 @@
         </div>
       </div>
     </div>
+    <bottomBar></bottomBar>
   </div>
 </template>
 
 <script>
+import bottomBar from "../components/bottomBar";
 export default {
   data() {
     return {
@@ -270,7 +272,8 @@ export default {
       console.log(this.choosedCity);
       this.$router.push("/home/city");
     }
-  }
+  },
+  components: { bottomBar }
 };
 </script>
 <style lang='less' scoped>
@@ -338,13 +341,13 @@ export default {
       height: 40%;
       background-repeat: no-repeat;
       background-origin: center;
-      background-size: 100%;
+      background-size: 100% 100%;
       cursor: pointer;
       border-radius: 10px;
       transition: all 0.2s linear;
       &:hover {
         box-shadow: 0 5px 12px 0 #ccc;
-        transform: scale(1.1);
+        // transform: scale(1.1);
       }
       &.spotMore {
         border-radius: 10px;

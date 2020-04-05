@@ -124,10 +124,8 @@ export default {
 </script>
 <style lang='less' scoped>
 #mes_cover {
-  width: calc(100% - 25rem);
+  width: 100%;
   min-height: 40rem;
-  // background-color: #ffffcc;
-  margin: 0 12.5rem;
   padding: 0;
   .messageList {
     width: 100%;
@@ -146,8 +144,8 @@ export default {
       &::after {
         content: "";
         width: 100%;
-        height: 2px;
-        background-color: #ccc;
+        height: 1px;
+        background-color: #e4e7ed;
         position: absolute;
         left: 0%;
         bottom: 0px;
