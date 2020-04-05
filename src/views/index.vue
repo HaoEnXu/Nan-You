@@ -4,8 +4,7 @@
     <div class="slide_banner">
       <el-carousel height="600px">
         <el-carousel-item v-for="item in slideArray" :key="item.src">
-          <!-- <img class="block_img" :src="item.src" />  -->
-          <div class="block_img" :style="{backgroundImage:'url('+item.src+')'}"></div>
+          <img class="block_img" :src="item.src" />
         </el-carousel-item>
       </el-carousel>
     </div>
